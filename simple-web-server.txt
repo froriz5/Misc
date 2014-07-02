@@ -1,0 +1,3 @@
+Running a simple Web Server on your localhost
+1) python -m SimpleHTTPServer
+source: http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python

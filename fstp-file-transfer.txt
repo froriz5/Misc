@@ -1,0 +1,9 @@
+Use fstp to transfer files to remote server
+1) open up fstp connection to remote server: fstp <remoteServer>
+2a) check local working dir: 'lpwd'
+2b) check remote working dir: 'pwd'
+3a) list files on remote: 'ls'
+3b) list files on local: 'lls'
+4) upload a file: 'put local.*'
+5) upload multiple files: 'put *.txt'
+6) exit fstp shell: '!'
