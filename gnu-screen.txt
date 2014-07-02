@@ -2,3 +2,5 @@ Separate program from a shell
 1) screen -S <ScreenName>
 2) run program
 3) 'Ctrl-A' then 'd'
+Uses: Running a script or program that needs to be running, even after you exit the shell.
+      i.e. running a localsever, or running a webserver on a virtual machine.
