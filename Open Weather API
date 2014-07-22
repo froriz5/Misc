@@ -1,0 +1,2 @@
+API call by zipcode:
+http://api.openweathermap.org/data/2.5/forecast/daily?q=30350,USA&mode=json&units=metric&cnt=7
