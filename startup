@@ -1,0 +1,44 @@
+## Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+git config --global user.name "Felipe Roriz"
+git config --global user.email "froriz50@gmail.com"
+git config --global alias.co checkout
+git config --global apply.whitespace nowarn
+
+## Configure things:
+ssh-keygen
+
+## Hit return a couple of times -- leave password blank if you want.
+cat ~/.ssh/id_rsa.pub | pbcopy
+
+## Paste that code into your settings page on your repository host(s).
+
+## Paste the following into your ~/.gitconfig file:
+"[color]
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan" >> ~/.gitconfig
+
+## Create a ~/.gitexcludes file and paste in this:
+.DS_Store >> ~/.gitignore
+
+## Add the following to your ~/.bash_profile or ~/.bashrc:
+source /usr/local/git/contrib/completion/git-completion.bash >> ~/.bashrc
+GIT_PS1_SHOWDIRTYSTATE=true >> ~/.bashrc
+
+source ~/.bashrc
+export PS1='[\u@mbp \w$(__git_ps1)]\$ ' >> ~/.bashrc
