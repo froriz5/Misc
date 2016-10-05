@@ -6,9 +6,16 @@ alias gc="git checkout"
 alias gpl="git pull"
 alias gps="git push"
 
+alias ls="ls -alh"
+
 alias cl="clear"
 
-PS1="\u@\h:\w\$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/') \$ "
+### See https://gist.github.com/trey/2722934
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+###if [ -f $(brew --prefix)/etc/bash_completion ]; then
+###    . $(brew --prefix)/etc/bash_completion
+###  fi
+
+###source /usr/local/etc/bash_completion.d/git-completion.bash
+###GIT_PS1_SHOWDIRTYSTATE=true
+###export PS1='[\u@mbp \w$(__git_ps1)]\$ '
